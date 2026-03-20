@@ -1,0 +1,42 @@
+.skills {
+  background: black;
+  color: white;
+  padding: 100px 40px;
+}
+
+.section-title {
+  font-size: 48px;
+  margin-bottom: 60px;
+  color: #ff2d2d;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.skill-group {
+  border-left: 2px solid #ff2d2d;
+  padding-left: 20px;
+}
+
+.skill-group h3 {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.skill-group p {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.8;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
