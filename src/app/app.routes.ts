@@ -1,17 +1,19 @@
-    import { Routes } from '@angular/router';
+import { Routes } from '@angular/router';
+import { SkillSectionComponent } from './skill-section/skill-section.component';
+import { ProjectComponent } from './project/project.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
-    export const routes: Routes = [
-
-    {path : 'skills', 
-    loadComponent: () =>   import('./skill-section/skill-section.component')
-        .then(m => m.SkillSectionComponent)
-    },
-    {path : 'project', 
-    loadComponent: () =>   import('./project/project.component')
-        .then(m => m.ProjectComponent)
-    },
-    {path : '', 
-    loadComponent: () =>   import('./home-page/home-page.component')
-        .then(m => m.HomePageComponent)
-    }
-    ];
+export const routes: Routes = [
+  {
+    path: 'skills',
+    component: SkillSectionComponent
+  },
+  {
+    path: 'project',
+    component: ProjectComponent
+  },
+  {
+    path: '',
+    component: HomePageComponent
+  }
+];
