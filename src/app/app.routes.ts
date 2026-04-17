@@ -10,10 +10,6 @@
     loadComponent: () =>   import('./project/project.component')
         .then(m => m.ProjectComponent)
     },
-    {path : 'contact', 
-    loadComponent: () =>   import('./contacts/contacts.component')
-        .then(m => m.ContactsComponent)
-    },
     {path : '', 
     loadComponent: () =>   import('./home-page/home-page.component')
         .then(m => m.HomePageComponent)

@@ -8,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class ProjectComponent {
 
+mavenDependency = `<dependency>
+  <groupId>io.github.himanshukushwahadev27</groupId>
+  <artifactId>infra-core</artifactId>
+  <version>1.0.0</version>
+</dependency>
+
+<dependency>
+  <groupId>io.github.himanshukushwahadev27</groupId>
+  <artifactId>infra-spring-boot</artifactId>
+  <version>1.0.0</version>
+</dependency>`;
 }

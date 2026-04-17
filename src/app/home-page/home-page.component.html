@@ -2,28 +2,65 @@
 
   <div class="top-bar">
     <span class="left">himanshu.dev</span>
-    <span class="right">VOL. 1 / 2026</span>
+    <span class="right">VOL. 2 / 2026</span>
   </div>
 
   <div class="content">
-    <h1 class="name-light">HIMANSHU</h1>
-    <h1 class="name-bold">KUSHWAHA</h1>
+    <div class="main-layout">
+      <div class="name-section">
+        <div class="name-container">
+          <h1 class="name-light">HIMANSHU</h1>
+          <h1 class="name-bold">KUSHWAHA</h1>
+          <p class="role">BACKEND • JAVA • SYSTEM DESIGN</p>
+        </div>
 
-    <p class="role">JAVA BACKEND DEVELOPER</p>
+        <div class="about-section">
+          <h2>ABOUT ME</h2>
+          <p>
+I'm Himanshu Kushwaha, a CS student (graduating 2027) focused on Java backend development and distributed systems.
 
-    <div class="line-button"> 
-      <div class="line"></div>
-    <button mat-button color="primary" [routerLink]="['/project']" >
-      VIEW PROJECTS 
-    </button>
-    <p> || </p>
-    <button mat-button color="primary" [routerLink]="['/skills']" >
-      SKILLS
-    </button>
-     <p> || </p>
-    <button mat-button color="primary" [routerLink]="['/contact']" >
-      CONTACTS
-    </button>
-  </div>
+          </p>
+          <p> I've built a fintech platform across 8+ microservices using Kafka, Keycloak, and Saga patterns .</p>
+          <p>I also published two open-source libraries to Maven Central — infra-core and infra-spring-boot — implementing distributed patterns like rate limiting, idempotency, and atomic caching for any Java application.</p>
+          <p>I care about system correctness, fault tolerance, and clean architecture. Always open to backend problems, open-source collaboration, and engineers who care about building things right.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="line-divider"></div>
+
+    <div class="actions-container">
+      <div class="social-links">
+        <a href="mailto:himanshumaurya447756@gmail.com" class="social-link" title="Email" matTooltip="Email">
+          <fa-icon [icon]="faEnvelope" class="social-icon"></fa-icon>
+        </a>
+        <a href="https://github.com/HimanshuKushwahadev27" target="_blank" class="social-link" title="GitHub" matTooltip="GitHub">
+          <fa-icon [icon]="faGithub" class="social-icon"></fa-icon>
+        </a>
+        <a href="https://www.geeksforgeeks.org/profile/himanshu_kushwaha" target="_blank" class="social-link" title="GeeksforGeeks" matTooltip="GeeksforGeeks">
+          <fa-icon [icon]="faBook" class="social-icon"></fa-icon>
+        </a>
+        <a href="https://hub.docker.com/u/himanshukushwaha69" target="_blank" class="social-link" title="Docker Hub" matTooltip="Docker Hub">
+          <fa-icon [icon]="faDocker" class="social-icon"></fa-icon>
+        </a>
+        <a href="https://central.sonatype.com/namespace/io.github.himanshukushwahadev27" target="_blank" class="social-link" title="Maven Central" matTooltip="Maven Central">
+          <fa-icon [icon]="faBox" class="social-icon"></fa-icon>
+        </a>
+      </div>
+
+      <div class="action-buttons">
+        <button mat-button color="primary" [routerLink]="['/project']" >
+          VIEW PROJECTS 
+        </button>
+        <p> || </p>
+        <button mat-button color="primary" [routerLink]="['/skills']" >
+          SKILLS
+        </button>
+        <p> || </p>
+        <a mat-button color="primary" href="https://drive.google.com/file/d/1wcz75FFGejk8msKTki4sAmY6VJryjJpy/view" target="_blank" >
+          RESUME
+        </a>
+      </div>
+    </div>
   </div>
 </div>

@@ -105,6 +105,29 @@
   text-align: center;
 }
 
+/* MAVEN CODE BLOCK */
+.maven-code {
+  background: #1a1a1a;
+  border-left: 3px solid #ff2d2d;
+  padding: 16px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #bbb;
+  overflow-x: auto;
+  display: block;
+  white-space: pre;
+}
+
+.maven-code code {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
 /*  RESPONSIVE FIX */
 @media (max-width: 768px) {
   .project-card img {
