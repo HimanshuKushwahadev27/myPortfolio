@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:ssr": "ng build",
+    "prerender": "ng build",
     "serve:ssr": "node dist/portfolio-site/server/server.mjs",
     "serve:ssr:portfolio-site": "node dist/portfolio-site/server/server.mjs"
   },
