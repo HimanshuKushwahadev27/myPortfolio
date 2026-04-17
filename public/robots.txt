@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /skills
+Allow: /project
+Disallow: /dist/
+Disallow: /.angular/
+Sitemap: https://www.himanshuk.me/sitemap.xml
