@@ -9,7 +9,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   padding: 0;
   
   // Background gradient effect (subtle)
@@ -74,7 +75,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(16px, 4vw, 60px);
+  padding: 0 16px;
   position: relative;
   z-index: 1;
 }
@@ -265,6 +266,7 @@
   justify-content: space-between;
   gap: clamp(30px, 5vw, 60px);
   flex-wrap: wrap;
+   overflow: visible;
 }
 
 @media (max-width: 768px) {
@@ -361,6 +363,7 @@
     gap: 12px;
     width: 100%;
     order: 1;
+    
   }
 }
 
@@ -368,6 +371,7 @@
 .action-buttons a[mat-button] {
   font-size: 13px;
   font-weight: 600;
+  box-sizing: border-box;
   padding: 12px 24px;
   height: auto;
   line-height: 1.4;
@@ -398,6 +402,7 @@
     transition: left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: -1;
   }
+ 
   
   &:hover {
     color: #000000;
@@ -418,20 +423,25 @@
 @media (max-width: 768px) {
   .action-buttons button,
   .action-buttons a[mat-button] {
-    width: 100%;
-    font-size: 12px;
+    width: auto;        
+    min-width: 220px;      
+    max-width: 90%;        
     padding: 12px 20px;
-    white-space: normal;
+     margin-right: 20px;
+
   }
 }
 
 @media (max-width: 480px) {
   .action-buttons button,
   .action-buttons a[mat-button] {
-    font-size: 11px;
-    padding: 11px 16px;
-    letter-spacing: 0.5px;
+    width: auto;        
+    min-width: 220px;      
+    max-width: 90%;        
+    padding: 12px 20px;
+    box-sizing: border-box;
     width: 100%;
+    margin-right: 20px;
   }
 }
 
