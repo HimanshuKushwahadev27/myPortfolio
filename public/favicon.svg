@@ -1,0 +1,20 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Rose to Red gradient matching website theme -->
+    <linearGradient id="themeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e91e63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef5350;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background inside circle -->
+  <circle cx="100" cy="100" r="90" fill="#0A0A0A"/>
+
+  <!-- Thick circular ring filling the gap -->
+  <circle cx="100" cy="100" r="87.5" fill="none" stroke="url(#themeGradient)" stroke-width="6"/>
+
+  <!-- Actual letters H and K inside the circle -->
+  <g fill="url(#themeGradient)" font-family="'Inter', 'Montserrat', 'Space Grotesk', sans-serif" font-size="75" font-weight="700" letter-spacing="-4" text-anchor="middle" dominant-baseline="central">
+    <text x="100" y="103">HK</text>
+  </g>
+</svg>

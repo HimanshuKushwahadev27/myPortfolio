@@ -1,64 +1,249 @@
-<div class="hero">
+<div id="home" class="portfolio-wrapper">
+  <!-- 1. Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="hk-logo.svg" alt="HK" class="nav-logo" />
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="home-link active">HIMANSHU</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="availability-badge">
+      <span class="dot"></span> Available for Work
+    </div>
+  </nav>
 
-  <div class="top-bar">
-    <span class="left">himanshu.dev</span>
-    <span class="right">VOL. 2 / 2026</span>
-  </div>
+  <!-- 2. Hero Section -->
+  <section class="hero-section">
+    <div class="stats-bar">
+      <span>700+ DSA Problems</span>
+      <span class="divider"></span>
+      <span>Java Backend Developer</span>
+      <span class="divider"></span>
+      <span>Graduating 2027</span>
+    </div>
+    
+    <div class="headline-container">
+      <h1 class="headline-text">
+        <span class="line-1">FROM ALGORITHMS</span>
+        <span class="line-2">TO SYSTEMS THAT<span class="accent"> SHIP.</span></span>
+      </h1>
+      <p class="role-label">JAVA · SPRING BOOT · MICROSERVICES · KAFKA · REDIS</p>
+    </div>
 
-  <div class="content">
-    <div class="main-layout">
-      <div class="name-section">
-        <div class="name-container">
-          <h1 class="name-light">HIMANSHU</h1>
-          <h1 class="name-bold">KUSHWAHA</h1>
-          <p class="role"> JAVA BACKEND • DISTRIBUTED SYSTEM • OPEN SOURCE</p>
-        </div>
-
-        <div class="about-section">
-          <h2>ABOUT ME</h2>
-          <p>I'm Himanshu Kushwaha — a CS student (graduating 2027) building production-grade backend systems in Java.
-          </p>
-          <p>I've built a fintech platform across 8+ microservices using Kafka, Keycloak, and Saga patterns. Beyond projects, I've published two open-source libraries to Maven Central — infra-core and infra-spring-boot — bringing distributed patterns like rate limiting, idempotency, and atomic caching to any Java application.</p>
-          <p>
-I care about system correctness, fault tolerance, and clean architecture. Always open to backend problems, open-source collaboration, and engineers who build things right.</p>
-        </div>
+    <div class="hero-bottom">
+      <div class="bio">
+        <p>CS undergrad. Backend-first.</p>
+        <p>Building systems that hold under pressure.</p>
+        <p class="location">India · UP </p>
+      </div>
+      
+      <div class="availability-pill">
+        <span class="dot"></span> Available for Work
       </div>
     </div>
 
-    <div class="line-divider"></div>
+    <div class="rotated-tag">
+      Spring · Microservices · DSA
+    </div>
+  </section>
 
-    <div class="actions-container">
-      <div class="social-links">
-        <a href="mailto:himanshumaurya447756@gmail.com" class="social-link" title="Email" matTooltip="Email">
-          <fa-icon [icon]="faEnvelope" class="social-icon"></fa-icon>
-        </a>
-        <a href="https://github.com/HimanshuKushwahadev27" target="_blank" class="social-link" title="GitHub" matTooltip="GitHub">
-          <fa-icon [icon]="faGithub" class="social-icon"></fa-icon>
-        </a>
-        <a href="https://www.geeksforgeeks.org/profile/himanshu_kushwaha" target="_blank" class="social-link" title="GeeksforGeeks" matTooltip="GeeksforGeeks">
-          <fa-icon [icon]="faBook" class="social-icon"></fa-icon>
-        </a>
-        <a href="https://hub.docker.com/u/himanshukushwaha69" target="_blank" class="social-link" title="Docker Hub" matTooltip="Docker Hub">
-          <fa-icon [icon]="faDocker" class="social-icon"></fa-icon>
-        </a>
-        <a href="https://central.sonatype.com/namespace/io.github.himanshukushwahadev27" target="_blank" class="social-link" title="Maven Central" matTooltip="Maven Central">
-          <fa-icon [icon]="faBox" class="social-icon"></fa-icon>
-        </a>
-      </div>
-
-      <div class="action-buttons">
-        <button mat-button color="primary" [routerLink]="['/project']" >
-          VIEW PROJECTS 
-        </button>
-        <p> || </p>
-        <button mat-button color="primary" [routerLink]="['/skills']" >
-          SKILLS
-        </button>
-        <p> || </p>
-        <a mat-button color="primary" href="https://drive.google.com/file/d/1wcz75FFGejk8msKTki4sAmY6VJryjJpy/view" target="_blank" >
-          RESUME
-        </a>
+  <!-- 3. Skills Ticker -->
+  <section class="skills-ticker-section">
+    <div class="ticker-wrapper">
+      <div class="ticker-content">
+        <span>Java</span><span class="dot">•</span>
+        <span>Spring Boot</span><span class="dot">•</span>
+        <span>REST APIs</span><span class="dot">•</span>
+        <span>Microservices</span><span class="dot">•</span>
+        <span>Kafka</span><span class="dot">•</span>
+        <span>Redis</span><span class="dot">•</span>
+        <span>Spring Security</span><span class="dot">•</span>
+        <span>JPA/Hibernate</span><span class="dot">•</span>
+        <span>Docker</span><span class="dot">•</span>
+        <span>Maven</span><span class="dot">•</span>
+        <span>DSA</span><span class="dot">•</span>
+        <span>OOPs</span><span class="dot">•</span>
+        <span>DBMS</span><span class="dot">•</span>
+        <span>OS</span><span class="dot">•</span>
+        <span>Networking</span><span class="dot">•</span>
+        <span>System Design</span><span class="dot">•</span>
+        <span>Spring Boot</span><span class="dot">•</span>
+        <span>Angular</span><span class="dot">•</span>
+        <!-- Duplicated for seamless scrolling -->
+        <span>Java</span><span class="dot">•</span>
+        <span>Spring Boot</span><span class="dot">•</span>
+        <span>REST APIs</span><span class="dot">•</span>
+        <span>Microservices</span><span class="dot">•</span>
+        <span>Kafka</span><span class="dot">•</span>
+        <span>Redis</span><span class="dot">•</span>
+        <span>Spring Security</span><span class="dot">•</span>
+        <span>JPA/Hibernate</span><span class="dot">•</span>
+        <span>Docker</span><span class="dot">•</span>
+        <span>Maven</span><span class="dot">•</span>
+        <span>DSA</span><span class="dot">•</span>
+        <span>OOPs</span><span class="dot">•</span>
+        <span>DBMS</span><span class="dot">•</span>
+        <span>OS</span><span class="dot">•</span>
+        <span>System Design</span><span class="dot">•</span>
+        <span>Spring Boot</span><span class="dot">•</span>
+        <span>Angular</span><span class="dot">•</span>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- 4. Selected Projects Section -->
+  <section id="projects" class="projects-section">
+    <p class="section-heading">SELECTED PROJECTS</p>
+    
+
+    <a href="#" class="project-row">
+      <div class="project-number">01</div>
+      <div class="project-tags">
+        <span class="tag">Microservices</span>
+        <span class="tag">Redis</span>
+      </div>
+      <div class="project-info">
+        <p class="context-label">Personal Project</p>
+        <h3 class="project-name">Astracore </h3>
+        <p class="project-desc">Distributed Rate Limiter</p>
+      </div>
+      <div class="project-metrics">
+        <div class="metric">
+          <h4>Sliding Window</h4>
+          <p>Rate Limiting</p>
+        </div>
+        <div class="metric">
+          <h4>OAuth2 / OIDC</h4>
+          <p>AUTH LAYER</p>
+        </div>
+      </div>
+    </a>
+
+
+    <a href="#" class="project-row">
+      <div class="project-number">02</div>
+      <div class="project-tags">
+        <span class="tag">Dependencies</span>
+        <span class="tag">Redis</span>
+      </div>
+      <div class="project-info">
+        <p class="context-label">Personal Project</p>
+        <h3 class="project-name">infra-core & infra-spring-boot</h3>
+        <p class="project-desc"> Published on Maven Central</p>
+      </div>
+      <div class="project-metrics">
+        <div class="metric">
+          <h4>Distributed Caching</h4>
+          <p>Architecture</p>
+        </div>
+        <div class="metric">
+          <h4>Spring Boot Starter</h4>
+          <p>Auto-Config</p>
+        </div>
+      </div>
+    </a>
+
+   <a href="#" class="project-row">
+      <div class="project-number">03</div>
+      <div class="project-tags">
+        <span class="tag">Microservices</span>
+        <span class="tag">Redis</span>
+      </div>
+      <div class="project-info">
+        <p class="context-label">Personal Project</p>
+        <h3 class="project-name">Bidding Simulator</h3>
+        <p class="project-desc">Distributed Bidding System</p>
+      </div>
+      <div class="project-metrics">
+        <div class="metric">
+          <h4>4 Services</h4>
+          <p>Architecture</p>
+        </div>
+        <div class="metric">
+          <h4>Redis</h4>
+          <p>DIstributed</p>
+        </div>
+      </div>
+    </a>
+    
+
+    <div class="project-row placeholder-row">
+      <div class="project-number">04</div>
+      <div class="project-tags"></div>
+      <div class="project-info">
+        <h3 class="project-name">View all</h3>
+      </div>
+      <div class="project-metrics"></div>
+    </div>
+  </section>
+
+  <!-- 5. About Section -->
+  <section id="about" class="about-section">
+    <div class="about-header">
+      <p class="section-label">MY STORY</p>
+      <h2 class="massive-heading">About</h2>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-left">
+        <div class="bio-text">
+        <p>I'm Himanshu Kushwaha — a CS student building production-grade backend systems in Java.</p>
+        <p>I've built a fintech platform across multiple microservices using Kafka, Keycloak, and Saga patterns. Beyond projects, I've published open-source libraries to Maven Central, bringing distributed patterns to any Java application.</p>
+        <p>I care about system correctness, fault tolerance, and clean architecture. Always open to backend problems, open-source collaboration, and engineers who build things right.</p>
+        <a class="resume" href="https://drive.google.com/file/d/1wcz75FFGejk8msKTki4sAmY6VJryjJpy/view">Resume</a>
+      </div>      
+    </div>
+    <div class="about-right">
+      <div class="experience">
+        <h3 class="sub-heading">Experience & Education</h3>
+        <div class="timeline-item">
+          <h4>B.Tech in Computer Science</h4>
+          <p class="timeline-meta">Expected Graduation: 2027</p>
+          <p class="timeline-desc">Coursework: Data Structures, Algorithms, OS, DBMS, Computer Networks, System Design.</p>
+        </div>
+      </div>
+      <div class="skills-block">
+        <h3 class="sub-heading">Skills</h3>
+        <div class="skills-cloud">
+          <span>Java</span><span>Spring Boot</span><span>DSA</span><span>OOPs</span><span>LLD</span><span>OS</span>
+          <span>DBMS</span><span>Networking</span><span>Docker</span><span>Kafka</span><span>Redis</span><span>Microservices</span><span>System Design</span><span>JPA/Hibernate</span><span>Angular</span><span>REST APIs</span><span>Linux</span>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- 6. Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-headings">
+      <h2 class="contact-heading">Say hi</h2>
+      <h2 class="contact-heading">
+        <a href="mailto:himanshukushwahadev27@gmail.com">
+          Let's connect.
+        </a>
+      </h2>
+    </div>
+    <div class="social-links">
+        <a href="https://github.com/HimanshuKushwahadev27" target="_blank">
+            <fa-icon [icon]="faGithub"></fa-icon> GitHub
+         </a>
+        <a href="https://www.linkedin.com/in/himanshu-kushwaha-34a5b4255/" target="_blank">
+          <fa-icon [icon]="faLinkedin"></fa-icon> LinkedIn
+        </a>
+        <a href="https://central.sonatype.com/namespace/io.github.himanshukushwahadev27" target="_blank">
+          <fa-icon [icon]="faMaven"></fa-icon> Maven
+        </a>
+        <a href="https://www.geeksforgeeks.org/profile/himanshu_kushwaha" target="_blank">
+          <fa-icon [icon]="faGeeksforgeeks"></fa-icon> GFG
+        </a>
+    </div>
+  </section>
+  <section class="footer">
+    <p>&copy; 2026 Himanshu Kushwaha · Vol.3 </p>
+  </section>
+ 
 </div>
