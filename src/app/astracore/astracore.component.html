@@ -3,16 +3,13 @@
 		<p class="eyebrow">Rate Limiter</p>
 		<h3>Astracore - Distributed Rate Limiter</h3>
 		<p class="summary">
-			A production-grade microservices platform with centralized Redis-backed
-			rate limiting, idempotency enforcement, and atomic stock management.
+			A microservices platform where every service shares rate limiting, idempotency, and cache behavior through a single Maven module — no duplication across services
 		</p>
 	</div>
 
 	<ul class="project-points">
 		<li>
-			Built Redis-backed sliding-window rate limiting, idempotency enforcement,
-			and atomic stock updates with Lua scripts to handle concurrent requests
-			without distributed locks.
+			Rate limiter enforces 5 req/min per user per endpoint via sliding window; verified under 10 concurrent users with correct 429 enforcement on threshold breach
 		</li>
 		<li>
 			Designed a reusable Maven module consumed across services, encapsulating
