@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-astracore',
-  imports: [],
+  host: {
+    id: 'astracore',
+    tabindex: '-1',
+  },
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './astracore.component.html',
   styleUrl: './astracore.component.scss',
 })

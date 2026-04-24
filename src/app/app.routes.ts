@@ -4,8 +4,13 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 export const routes: Routes = [
   {
-    path: 'project',
+    path: 'projects',
     component: ProjectComponent
+  },
+  {
+    path: 'project',
+    redirectTo: 'projects',
+    pathMatch: 'full'
   },
   {
     path: '',

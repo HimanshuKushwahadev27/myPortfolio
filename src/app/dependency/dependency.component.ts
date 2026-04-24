@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-dependency',
-  imports: [],
+  host: {
+    id: 'dependency',
+    tabindex: '-1',
+  },
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './dependency.component.html',
   styleUrl: './dependency.component.scss',
 })

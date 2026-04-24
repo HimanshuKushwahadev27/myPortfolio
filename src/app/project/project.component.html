@@ -2,19 +2,15 @@
   <h2 class="section-title">Projects</h2>
 
   <div class="projects-grid">
-
     <!-- Payment App -->
     <div class="project-card highlight">
       <h3>Just-Pay App (Fintech Platform)</h3>
 
       <ul class="project-points">
-        <li> Built a Paytm-like payment system across 5+ services (wallet, payment, transaction, notification, user) with Kafka-driven async communication, idempotent APIs, and Stripe webhook integration for real-world payment flows</li>
-        
-        <li> Designed a wallet system using double-entry bookkeeping (DEBIT/CREDIT ledger entries with materialized balance view), ensuring financial correctness, auditability, and consistency under distributed failures</li>
-        
+        <li>Built a Paytm-like payment system across 5+ services (wallet, payment, transaction, notification, user) with Kafka-driven async communication, idempotent APIs, and Stripe webhook integration for real-world payment flows</li>
+        <li>Designed a wallet system using double-entry bookkeeping (DEBIT/CREDIT ledger entries with materialized balance view), ensuring financial correctness, auditability, and consistency under distributed failures</li>
         <li>Built a full KYC pipeline (OTP verification → document upload → admin approval) using pre-signed MinIO URLs for direct frontend-to-storage uploads, reducing backend load and keeping the system S3-migratable</li>
-
-        <li> Implemented Payment Service as a Saga orchestrator for wallet transfers, with compensation events to auto-refund sender wallet on downstream credit failures — preventing money loss under partial failures</li>
+        <li>Implemented Payment Service as a Saga orchestrator for wallet transfers, with compensation events to auto-refund sender wallet on downstream credit failures — preventing money loss under partial failures</li>
       </ul>
 
       <!-- TAGS -->
@@ -33,8 +29,8 @@
         <span>Docker</span>
       </div>
 
-      <img 
-        src="https://raw.githubusercontent.com/HimanshuKushwahadev27/Payment-App/main/just-pay%20architecture.png" 
+      <img
+        src="https://raw.githubusercontent.com/HimanshuKushwahadev27/Payment-App/main/just-pay%20architecture.png"
         alt="Just Pay Architecture">
 
       <div class="project-links">
@@ -42,46 +38,17 @@
       </div>
     </div>
 
-    <!-- published packages  -->
-      <div class="project-card highlight">
-      <h3>infra-core & infra-spring-boot · Published on Maven Central</h3>
-
-      <ul class="project-points">
-        <li> A framework-agnostic Java library implementing distributed infrastructure patterns — rate limiting (token bucket), idempotency, caching, and atomic stock management — backed by Redis. Designed with clean interface abstractions and a factory pattern for zero-framework dependency.</li>
-        
-        <li>Ships with a companion infra-spring-boot module that provides Spring Boot auto-configuration, making all four patterns available via constructor injection with zero boilerplate.</li>
-        
-      </ul>
-
-      <!-- MAVEN DEPENDENCIES -->
-      <pre class="maven-code"><code>{{ mavenDependency }}</code></pre>
-
-
-      <!-- TAGS -->
-      <div class="tags">
-        <span>Spring Boot</span>
-        <span>Java</span>
-        <span>Redis</span>
-        <span>Distributed System</span>
-        <span>Rate Limiting</span>
-        <span>Idempotency</span>
-        <span>Open Source</span>
-        <span>Maven central</span>
-      </div>
-
-      <div class="project-links">
-        <a href="https://central.sonatype.com/namespace/io.github.himanshukushwahadev27">Maven Central →</a>
-      </div>
-    </div>
-
+    <app-dependency></app-dependency>
+    <app-astracore></app-astracore>
+    <app-bidding></app-bidding>
 
     <!-- Inkly -->
     <div class="project-card highlight">
       <h3>Inkly - Light Novel Platform</h3>
 
       <ul class="project-points">
-        <li>	A scalable microservices system (8+ services) with Kafka-based async communication using AVRO schemas for type-safe, backward-compatible event contracts between Catalog, Search, and Notification services</li>
-        <li> Engineered a Draft → Publish → Search pipeline where Authoring Service syncs published content to Catalog Service via OpenFeign, triggering Kafka events consumed by OpenSearch for real-time indexing and discovery</li>
+        <li>A scalable microservices system (8+ services) with Kafka-based async communication using AVRO schemas for type-safe, backward-compatible event contracts between Catalog, Search, and Notification services</li>
+        <li>Engineered a Draft → Publish → Search pipeline where Authoring Service syncs published content to Catalog Service via OpenFeign, triggering Kafka events consumed by OpenSearch for real-time indexing and discovery</li>
         <li>Implemented an Order Service as a Saga orchestrator coordinating Payment Service (Stripe), Catalog Service (access grant), and Notification Service — with idempotent payment handling to prevent duplicate charges</li>
         <li>Designed a dedicated Search Service that consumes Kafka book events and indexes content into OpenSearch, enabling multi-field discovery by author, genre, title, and keywords</li>
         <li>Wired Keycloak (OAuth2/OIDC + RBAC) for role-based author/user access, Flyway for versioned schema migrations across database-per-service PostgreSQL instances, and Docker Compose for full-stack containerized deployment</li>
@@ -102,48 +69,16 @@
         <span>OAuth2</span>
       </div>
 
-      <img 
-        src="https://raw.githubusercontent.com/HimanshuKushwahadev27/Inkly-light-novel-project/main/inkly-architecture.png" 
+      <img
+        src="https://raw.githubusercontent.com/HimanshuKushwahadev27/Inkly-light-novel-project/main/inkly-architecture.png"
         alt="Inkly Architecture">
 
       <div class="project-links">
         <a href="https://github.com/HimanshuKushwahadev27/Inkly-light-novel-project" target="_blank">GitHub →</a>
       </div>
     </div>
-    
-     <!-- RateLimiter -->
-    <div class="project-card highlight">
-      <h3>Astracore - Distributed Rate Limiter</h3>
 
-      <ul class="project-points">
-        <li>Built a production-grade microservices platform with centralized Redis-backed rate limiting (sliding window), idempotency enforcement, and atomic stock management via Lua scripts, handling concurrent requests without distributed locks</li>
-        <li> Designed a reusable Maven module consumed across services, encapsulating rate limiting, idempotency, cache abstraction, and namespaced Redis key management to eliminate cross-service duplication</li>
-        <li>Integrated Keycloak (OAuth2/OIDC) for JWT-based auth with PKCE flow on Angular SPA; managed all DB schemas via Flyway versioned migrations for CI/CD-friendly, zero-drift deployments</li>
-        <li>Dockerized the full stack across two independently managed Compose layers (infra + services), with Redis, PostgreSQL, and Keycloak as stateful dependencies and Spring Boot services auto-migrating schemas on startup</li>
-      </ul>
-
-      <div class="tags">
-        <span>Angular</span>
-        <span>Spring Boot</span>
-        <span>REST APIs</span>
-        <span>Postgres</span>
-        <span>Keycloak</span>
-        <span>Angular</span>
-        <span>Flyway-migrations</span>
-        <span>Docker</span>
-        <span>Redis</span>
-      </div>
-
-      <img 
-        src="https://raw.githubusercontent.com/HimanshuKushwahadev27/distributed-rate-limiter/main/architecture-diagram.png" 
-        alt="Distributed Rate Limiter Architecture">
-
-      <div class="project-links">
-        <a href="https://github.com/HimanshuKushwahadev27/distributed-rate-limiter" target="_blank">GitHub →</a>
-      </div>
-    </div>
-
- <!-- Microservices Demo -->
+    <!-- Microservices Demo -->
     <div class="project-card highlight">
       <h3>Microservices Fullstack Demo</h3>
 
@@ -172,26 +107,6 @@
       </div>
     </div>
 
-    <!-- Crowd Funding -->
-    <div class="project-card highlight">
-      <h3>Crowd Funding (Blockchain)</h3>
-
-      <p>
-        Decentralized crowdfunding platform using Ethereum smart contracts
-        for transparent and trustless funding.
-      </p>
-
-      <div class="tags">
-        <span>Ethereum</span>
-        <span>Solidity</span>
-        <span>React</span>
-        <span>Web3</span>
-      </div>
-
-      <div class="project-links">
-        <a href="https://github.com/HimanshuKushwahadev27/Crowd-Funding" target="_blank">GitHub →</a>
-      </div>
-    </div>
-
+  
   </div>
 </section>

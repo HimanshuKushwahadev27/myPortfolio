@@ -265,11 +265,19 @@ a {
   }
 
   .project-row {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 3rem 0;
     border-bottom: 1px solid rgba(220, 38, 38, 0.2); // Red border
     transition: background-color 150ms ease;
+    cursor: pointer;
+    text-align: left;
+    font: inherit;
+    color: inherit;
 
     &:first-of-type {
       border-top: 1px solid rgba(220, 38, 38, 0.2);
@@ -279,9 +287,17 @@ a {
       background-color: rgba(220, 38, 38, 0.03); // Subtle tint
     }
 
+    &:focus-visible {
+      outline: 2px solid $accent-color;
+      outline-offset: 10px;
+    }
+
     &.placeholder-row {
       opacity: 0.4;
-      pointer-events: none;
+    }
+
+    &.view-all-row {
+      opacity: 0.55;
     }
 
     .project-number {
@@ -355,6 +371,32 @@ a {
           text-transform: uppercase;
           color: $text-secondary;
           letter-spacing: 0.05em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-section {
+    .project-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+
+      .project-number,
+      .project-tags,
+      .project-info,
+      .project-metrics {
+        width: 100%;
+      }
+
+      .project-metrics {
+        justify-content: flex-start;
+
+        .metric {
+          align-items: flex-start;
+          text-align: left;
         }
       }
     }

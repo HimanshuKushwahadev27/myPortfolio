@@ -99,54 +99,54 @@
     <p class="section-heading">SELECTED PROJECTS</p>
     
 
-    <a href="#" class="project-row">
+    <button type="button" class="project-row" (click)="openProject('astracore')">
       <div class="project-number">01</div>
       <div class="project-tags">
-        <span class="tag">Microservices</span>
+        <span class="tag">Spring Boot</span>
         <span class="tag">Redis</span>
       </div>
       <div class="project-info">
         <p class="context-label">Personal Project</p>
-        <h3 class="project-name">Astracore </h3>
-        <p class="project-desc">Distributed Rate Limiter</p>
+        <h3 class="project-name">Astracore</h3>
+        <p class="project-desc">Distributed rate limiter and idempotency core</p>
       </div>
       <div class="project-metrics">
         <div class="metric">
           <h4>Sliding Window</h4>
-          <p>Rate Limiting</p>
+          <p>Rate limiting</p>
         </div>
         <div class="metric">
-          <h4>OAuth2 / OIDC</h4>
-          <p>AUTH LAYER</p>
+          <h4>Keycloak</h4>
+          <p>OAuth2 / OIDC</p>
         </div>
       </div>
-    </a>
+    </button>
 
 
-    <a href="#" class="project-row">
+    <button type="button" class="project-row" (click)="openProject('dependency')">
       <div class="project-number">02</div>
       <div class="project-tags">
-        <span class="tag">Dependencies</span>
+        <span class="tag">Java</span>
         <span class="tag">Redis</span>
       </div>
       <div class="project-info">
         <p class="context-label">Personal Project</p>
         <h3 class="project-name">infra-core & infra-spring-boot</h3>
-        <p class="project-desc"> Published on Maven Central</p>
+        <p class="project-desc">Published on Maven Central</p>
       </div>
       <div class="project-metrics">
         <div class="metric">
-          <h4>Distributed Caching</h4>
-          <p>Architecture</p>
+          <h4>Maven Central</h4>
+          <p>Published libraries</p>
         </div>
         <div class="metric">
-          <h4>Spring Boot Starter</h4>
-          <p>Auto-Config</p>
+          <h4>Spring Boot</h4>
+          <p>Auto-configuration</p>
         </div>
       </div>
-    </a>
+    </button>
 
-   <a href="#" class="project-row">
+    <button type="button" class="project-row" (click)="openProject('bidding')">
       <div class="project-number">03</div>
       <div class="project-tags">
         <span class="tag">Microservices</span>
@@ -167,18 +167,23 @@
           <p>DIstributed</p>
         </div>
       </div>
-    </a>
+    </button>
     
 
-    <div class="project-row placeholder-row">
+    <button type="button" class="project-row placeholder-row view-all-row" (click)="goToProjects()">
       <div class="project-number">04</div>
       <div class="project-tags"></div>
       <div class="project-info">
         <h3 class="project-name">View all</h3>
       </div>
       <div class="project-metrics"></div>
-    </div>
+    </button>
   </section>
+
+  <app-project-panel
+    [projectKey]="selectedProject()"
+    (onClose)="closeProject()"
+  ></app-project-panel>
 
   <!-- 5. About Section -->
   <section id="about" class="about-section">

@@ -1,1 +1,59 @@
-<p>astracore works!</p>
+<section class="project-card">
+	<div class="card-head">
+		<p class="eyebrow">Rate Limiter</p>
+		<h3>Astracore - Distributed Rate Limiter</h3>
+		<p class="summary">
+			A production-grade microservices platform with centralized Redis-backed
+			rate limiting, idempotency enforcement, and atomic stock management.
+		</p>
+	</div>
+
+	<ul class="project-points">
+		<li>
+			Built Redis-backed sliding-window rate limiting, idempotency enforcement,
+			and atomic stock updates with Lua scripts to handle concurrent requests
+			without distributed locks.
+		</li>
+		<li>
+			Designed a reusable Maven module consumed across services, encapsulating
+			rate limiting, idempotency, cache abstraction, and namespaced Redis key
+			management to eliminate duplication.
+		</li>
+		<li>
+			Integrated Keycloak with OAuth2/OIDC and PKCE for the Angular SPA, while
+			Flyway managed versioned schema migrations for zero-drift deployments.
+		</li>
+		<li>
+			Dockerized the stack across infra and service layers, with Redis,
+			PostgreSQL, and Keycloak as stateful dependencies and Spring Boot
+			services auto-migrating schemas on startup.
+		</li>
+	</ul>
+
+	<div class="tags" aria-label="Astracore technologies">
+		<span>Angular</span>
+		<span>Spring Boot</span>
+		<span>REST APIs</span>
+		<span>Postgres</span>
+		<span>Keycloak</span>
+		<span>Flyway</span>
+		<span>Docker</span>
+		<span>Redis</span>
+	</div>
+
+	<img
+		src="https://raw.githubusercontent.com/HimanshuKushwahadev27/distributed-rate-limiter/main/architecture-diagram.png"
+		alt="Distributed Rate Limiter Architecture"
+		loading="lazy"
+	/>
+
+	<div class="project-links">
+		<a
+			href="https://github.com/HimanshuKushwahadev27/distributed-rate-limiter"
+			target="_blank"
+			rel="noreferrer noopener"
+		>
+			GitHub →
+		</a>
+	</div>
+</section>

@@ -1,0 +1,50 @@
+<div class="project-panel-shell" [class.is-open]="isOpen()">
+  <div
+    class="project-panel-backdrop"
+    [class.is-visible]="isOpen()"
+    aria-hidden="true"
+    (click)="onClose.emit()"
+  ></div>
+
+  <aside
+    class="project-panel"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-hidden]="!isOpen()"
+  >
+    <header class="project-panel__header">
+      <div>
+        <p class="project-panel__eyebrow">Selected project</p>
+        <h2 class="project-panel__title">Project details</h2>
+      </div>
+
+      <button
+        type="button"
+        class="project-panel__close"
+        aria-label="Close project panel"
+        (click)="onClose.emit()"
+      >
+        ×
+      </button>
+    </header>
+
+    <div class="project-panel__content">
+      @switch (projectKey()) {
+        @case ('astracore') {
+          <app-astracore></app-astracore>
+        }
+        @case ('dependency') {
+          <app-dependency></app-dependency>
+        }
+        @case ('bidding') {
+          <app-bidding></app-bidding>
+        }
+        @default {
+          <div class="project-panel__empty">
+            Select a project to view its details.
+          </div>
+        }
+      }
+    </div>
+  </aside>
+</div>

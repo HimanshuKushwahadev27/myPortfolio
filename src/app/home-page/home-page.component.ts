@@ -1,16 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, effect, inject, signal } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faBookOpen, faCubesStacked } from '@fortawesome/free-solid-svg-icons';
 import { Meta, Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { ProjectPanelComponent, type ProjectKey } from '../project-panel/project-panel.component';
 
 @Component({
   selector: 'app-home-page',
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, ProjectPanelComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
 })
 export class HomePageComponent implements OnInit {
+  private readonly document = inject(DOCUMENT);
+  private readonly router = inject(Router);
+
+  readonly selectedProject = signal<ProjectKey | null>(null);
+
+  private readonly bodyScrollLock = effect((onCleanup) => {
+    const body = this.document.body;
+    const previousOverflow = body.style.overflow;
+    body.style.overflow = this.selectedProject() ? 'hidden' : '';
+
+    onCleanup(() => {
+      body.style.overflow = previousOverflow;
+    });
+  });
+
   constructor(private title: Title, private meta: Meta) {}
 
   ngOnInit() {
@@ -27,4 +46,16 @@ export class HomePageComponent implements OnInit {
   faLinkedin = faLinkedin;
   faGeeksforgeeks = faBookOpen;
   faMaven = faCubesStacked;
+
+  openProject(projectKey: ProjectKey) {
+    this.selectedProject.set(projectKey);
+  }
+
+  closeProject() {
+    this.selectedProject.set(null);
+  }
+
+  goToProjects() {
+    void this.router.navigate(['/projects']);
+  }
 }

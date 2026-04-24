@@ -1,1 +1,33 @@
-<p>bidding works!</p>
+<section class="project-card">
+	<div class="card-head">
+		<p class="eyebrow">Distributed Bidding</p>
+		<h3>Bidding Simulator</h3>
+		<p class="summary">
+			A distributed bidding system built to practice real-time coordination,
+			service boundaries, and state consistency under concurrent load.
+		</p>
+	</div>
+
+	<ul class="project-points">
+		<li>Engineered a distributed auction engine with 3 concurrency strategies — Redis distributed locks, Optimistic Locking (JPA versioning), and Naive — benchmarking conflict rates from 0% to 40% under simulated high-load scenarios.</li>
+		<li>Built a concurrent bid simulator capable of firing N parallel bid requests, exposing real-time metrics (success rate, avg latency, conflict rate) to compare locking strategy trade-offs at scale.</li>
+		<li>Implemented Optimistic Locking with retry logic as the default strategy, achieving 4× higher throughput over Redis Lock while maintaining acceptable conflict rates (5–15%) for typical auction load.</li>
+	</ul>
+
+	<div class="tags" aria-label="Bidding technologies">
+		<span>Microservices</span>
+		<span>Redis</span>
+		<span>Spring Boot</span>
+		<span>Event-driven</span>
+    <span>Concurrency</span>
+    <span>Locking Strategies</span>
+	</div>
+
+  <img src="https://raw.githubusercontent.com/HimanshuKushwahadev27/distributed-bidding-engine/main/bidding-engine.png" alt="Bidding Engine Architecture" 
+  
+  />
+
+	<div class="project-links">
+		<a href="https://github.com/HimanshuKushwahadev27/distributed-bidding-engine" target="_blank" rel="noreferrer noopener">GitHub →</a>
+	</div>
+</section>
